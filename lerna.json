@@ -4,7 +4,7 @@
   ],
   "version": "0.0.0",
   "useWorkspaces": true,
-  "npmClient": "pnpm",
+  "npmClient": "npm",
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "useNx": false
 }
