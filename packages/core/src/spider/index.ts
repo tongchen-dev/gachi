@@ -4,7 +4,7 @@ import { urls } from "../types/spider";
 
 export interface Spider<T=any> {
 	urls: urls[];
-	open(): Promise<void>;
+	open(): Promise<void> | void | T;
 	run({res, config}: runParma): Box | void;
-	close(): Promise<void>;
+	close(): Promise<void> | void | T;
 }
