@@ -1,18 +1,15 @@
 {
   "name": "gachi",
+  "private": "true",
   "version": "0.0.0",
-  "description": "",
+  "description": "A crawler framework written by typescript",
+  "keywords": ["crawler", "framework", "typescript"],
   "author": "GaoNeng-wWw <gaonenggg@outlook.com>",
   "homepage": "",
-  "license": "ISC",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "license": "MIT",
   "scripts": {
     "test": "jest",
-    "build": "gulp build"
+    "build": "gulp default&&gulp prePublish&&gulp clear"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^23.0.0",
@@ -23,10 +20,12 @@
     "@types/xmldom": "^0.1.31",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
+    "del": "^7.0.0",
     "eslint": "^8.23.1",
     "gulp": "^4.0.2",
     "gulp-better-rollup": "^4.0.1",
     "gulp-typescript": "6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
     "jest": "^29.0.3",
     "rollup": "^3.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
