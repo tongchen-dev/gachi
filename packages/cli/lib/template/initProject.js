@@ -13,21 +13,20 @@ app().then();
 exports.buildSpiderTemplate = (projectName) => {
 	return `
 import { Box, Spider } from "gachi";
-import { runParma } from "gachi/types/engine";
-import { urls } from "gachi/types/spider";
-export class ${projectName}Spider implements Spider{
-	urls: urls[];
-	open(): Promise<void> {
-		throw new Error("Method not implemented.");
+import type {urls, runParma} from "gachi/dist/types";
+export class Example1Spider implements Spider{
+	urls: urls[]=[];
+	open(): void {
+		console.log('open')
 	}
 	run({ res, config }: runParma): void | Box {
-		throw new Error("Method not implemented.");
+		console.log('run')
 	}
-	close(): Promise<void> {
-		throw new Error("Method not implemented.");
+	close(): void {
+		console.log('run')
 	}
 
-}
+}	
 `;
 }
 

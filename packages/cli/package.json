@@ -1,6 +1,6 @@
 {
   "name": "gachi-cli",
-  "version": "0.0.7",
+  "version": "0.0.0",
   "description": "> TODO: description",
   "author": "GaoNeng-wWw <gaonenggg@outlook.com>",
   "homepage": "",
@@ -21,10 +21,12 @@
     "ga0neng-test-cli": "^0.0.0",
     "inquirer": "^9.1.2",
     "shelljs": "^0.8.5",
+    "test-server": "^0.2.1",
     "typescript": "^4.8.4"
   },
   "directories": {
     "lib": "lib"
   },
-  "keywords": []
+  "keywords": [],
+  "gitHead": "b58c722c234dba75d439be5b8534cce71d4587b0"
 }
