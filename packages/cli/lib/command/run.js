@@ -9,6 +9,6 @@ exports.runProject = (projectName) => {
 	const configFile = ts.readConfigFile(configFilePath, ts.sys.readFile).config;
 	const entryDir = configFile.compilerOptions.outDir;
 	const defaultEntry = 'index.js';
-	const entryPath = resolve(projectName, basename(entryDir), defaultEntry);
+	const entryPath = resolve(projectName, basename(entryDir ?? './dist'), defaultEntry);
 	exec(`node ${entryPath}`);
 }

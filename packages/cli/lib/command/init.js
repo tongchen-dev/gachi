@@ -1,10 +1,8 @@
 const {buildConfigTemplate, buildEntryAppTemplate, buildSpiderTemplate, buildPackage} = require('../template/initProject');
-const { mkdir, mkdirSync, writeFileSync, writeFile, copyFileSync } = require('fs');
+const { mkdir, mkdirSync, writeFileSync, copyFileSync } = require('fs');
 const { resolve, join } = require('path');
-const { relation } = require('./realation');
-const { toCamelCase, toBigCamelCase } = require('../shared/utils');
+const { toBigCamelCase } = require('../shared/utils');
 const shell = require('shelljs');
-const { execSync } = require('child_process');
 exports.initProject = (project_name) => {
     const basePath = resolve('./');
     const projectPath = join(basePath, project_name);
@@ -26,7 +24,8 @@ exports.initProject = (project_name) => {
 	console.log('[2/3] Fetch dependencies')
 	// shell.exec('pnpm install gachi');
 	console.log('[3/3] init tsconfig.json');
-	copyFileSync('tsconfig.json', join(projectPath, 'tsconfig.json'));
+	const tsConfigFilePath = resolve(__dirname, '../tsconfig.json');
+	copyFileSync(tsConfigFilePath, join(projectPath, 'tsconfig.json'));
 	console.log('Gachi is init success');
 	console.log('Please run: ');
 	console.log('pnpm/npm/yarn install');
